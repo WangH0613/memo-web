@@ -1,0 +1,317 @@
+@import '~ant-design-vue/es/style/themes/default.less';
+
+html,
+body,
+#app, #root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout.layout-basic {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.ant-layout.ant-layout-has-sider {
+  height: 100%;
+}
+
+.ant-layout {
+  background: #F6F6F6 !important;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 全局按钮样式
+.main-layout-container {
+  .ant-btn {
+    width: 80px;
+    height: 32px;
+  }
+}
+
+// 数据列表 样式
+.table-alert {
+  margin-bottom: 16px;
+}
+
+// 数据列表 操作
+.table-operator {
+  margin-bottom: 18px;
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+.ant-table {
+  //.ant-table-body {
+  //  max-height: calc(100vh - 300px);
+  //  overflow-y: auto;
+  //}
+
+  .ant-table-thead > tr > th {
+    //text-align: center;
+    //color: #1890ff;
+    background: #FFFFFF; //#F1F4FA
+  }
+
+  .ant-table-tbody > tr > td {
+    //text-align: center;
+  }
+}
+
+// 数据列表 查询结果
+.search-table-box-wrapper {
+  padding: 24px 16px;
+  background: #FFFFFF;
+}
+
+// 数据列表 搜索条件
+.table-page-search-wrapper {
+  width: 100%;
+  padding: 24px 32px;
+  background: #FFFFFF;
+
+  .ant-form-inline {
+    .ant-form-item {
+      display: flex;
+      //margin-bottom: 24px;
+      margin-right: 0;
+
+      .ant-form-item-control-wrapper {
+        flex: 1 1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      > .ant-form-item-label {
+        line-height: 32px;
+        padding-right: 8px;
+        width: auto;
+      }
+
+      .ant-form-item-control {
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .table-page-search-submitButtons {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// ******************** **************** ******************** //
+// ******************** 以下为各种样式的重写 ******************** //
+// ******************** **************** ******************** //
+
+// 去掉侧边菜单栏的右侧线条
+.ant-menu-inline {
+  border-right: 0;
+}
+
+// 定制全屏弹出窗口
+.fullscreen {
+  .ant-modal {
+    padding-bottom: 0;
+    width: calc(100vw - 48px) !important;
+
+    .ant-modal-content {
+      .ant-modal-body {
+        height: calc(100vh - 156px) !important;
+        overflow-y: scroll;
+      }
+    }
+
+    .ant-modal-footer {
+      text-align: center;
+    }
+  }
+
+  .detail {
+    .ant-modal-footer {
+      display: none !important;
+    }
+  }
+}
+
+// 定制添加技术属性弹出窗口
+.addTechnical {
+  .ant-modal {
+    padding-bottom: 0;
+    width: 1000px !important;
+
+    .ant-modal-content {
+      .ant-modal-body {
+        height: calc(100vh - 300px) !important;
+        overflow-y: scroll;
+      }
+    }
+
+    .ant-modal-footer {
+      text-align: center;
+    }
+  }
+}
+
+// 设置操作样式
+.action {
+  .anticon {
+    margin-right: 16px;
+    cursor: pointer;
+  }
+  span {
+    cursor: pointer;
+  }
+}
+
+// ******************** **************** ******************** //
+// ******************** 以下为各种公用的样式 ******************** //
+// ******************** **************** ******************** //
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mt24 {
+  margin-top: 24px;
+}
+
+.ml24 {
+  margin-left: 24px;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+}
+
+.mr24 {
+  margin-right: 24px;
+}
+
+.mt16 {
+  margin-top: 16px;
+}
+
+.ml16 {
+  margin-left: 16px;
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.mr16 {
+  margin-right: 16px;
+}
+
+.mt8 {
+  margin-top: 8px;
+}
+
+.ml8 {
+  margin-left: 8px;
+}
+
+.mb8 {
+  margin-bottom: 8px;
+}
+
+.mr8 {
+  margin-right: 8px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.w300 {
+  width: 300px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #EEEEEE;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #999999;
+}
